@@ -9,11 +9,10 @@ public class PuzzleLine {
     private final int lastNum;
     public PuzzleLine(String line) {
         // Replace all non strings with spaces
-        String numberList = line.replaceAll("[^0-9]", " ");
+        String numberList = line.replaceAll("[^0-9]", "");
         // Reduce all spaces (consecutive or single) to a comma.
-        numberList = numberList.trim().replaceAll(" +", ",");
         // Collect the numbers into a String Array
-        String[] validNumbers = numberList.split(",");
+        char[] validNumbers = numberList.toCharArray();
         // If the line contained zero numbers, set the values to 0 and return
         if (validNumbers.length == 0) {
             firstNum = 0;
@@ -21,7 +20,7 @@ public class PuzzleLine {
             return;
         }
         // Otherwise, Grab the values
-        firstNum = Integer.parseInt(String.valueOf(validNumbers[0].charAt(0)));
-        lastNum = Integer.parseInt(String.valueOf(validNumbers[validNumbers.length-1].charAt((validNumbers[validNumbers.length-1]).length() -1)));
+        firstNum = Integer.parseInt(String.valueOf(validNumbers[0]));
+        lastNum = Integer.parseInt(String.valueOf(validNumbers[validNumbers.length-1]));
     }
 }
