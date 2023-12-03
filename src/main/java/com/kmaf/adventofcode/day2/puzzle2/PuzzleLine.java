@@ -1,16 +1,16 @@
-package com.kmaf.adventofcode.day2.puzzle1;
+package com.kmaf.adventofcode.day2.puzzle2;
 
 import lombok.Getter;
 
 @Getter
-public class PuzzleLine3 {
+public class PuzzleLine {
 
     private final int gameNo;
     private int foundRed;
     private int foundGreen;
     private int foundBlue;
 
-    public PuzzleLine3(String line) {
+    public PuzzleLine(String line) {
         String[] lineSplit = line.split(":");
         // Get the game no
         gameNo = Integer.parseInt(lineSplit[0].split(" ")[1]);

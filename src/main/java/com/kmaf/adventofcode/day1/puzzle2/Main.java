@@ -23,7 +23,7 @@ public class Main {
             AtomicInteger figure = new AtomicInteger();
             Scanner inputFileReader = new Scanner(inputFile);
             inputFileReader.forEachRemaining((String line) -> {
-                PuzzleLine2 puzzleLine = new PuzzleLine2(line);
+                PuzzleLine puzzleLine = new PuzzleLine(line);
                 figure.set(figure.get() + (puzzleLine.getFirstNum() * 10) + puzzleLine.getLastNum());
             });
             log.info("The Calibration figure is: " + figure);

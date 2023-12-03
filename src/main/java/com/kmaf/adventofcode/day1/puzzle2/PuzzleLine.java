@@ -3,11 +3,11 @@ package com.kmaf.adventofcode.day1.puzzle2;
 import lombok.Getter;
 
 @Getter
-public class PuzzleLine2 {
+public class PuzzleLine {
 
     private final int firstNum;
     private final int lastNum;
-    public PuzzleLine2(String line) {
+    public PuzzleLine(String line) {
         // Replace any spelt numbers with numerical characters - This is ugly but, It works
         line = line.replace("zero", "zero0zero");
         line = line.replace("one", "one1one");
